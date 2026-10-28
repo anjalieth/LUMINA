@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Study Abroad</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo-icon"></div>
+            <span class="logo-text">LUMINA</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+			<li><a href="#about">About</a></li>
+            <li><a href="#our stories">Our Stories</a></li>
+			
+            <li><a href="#" id="registerBtn" class="nav-cta">Register Now</a></li>
+        </ul>
+    </nav>
+	
+	<div id="registerModal" class="registernow">
+    <div class="registernow-content">
+        <span class="close-modal">&times;</span>
+        <h2>Begin Your Journey</h2><br>
+        <p>Enter your details to start your global adventure.</p><br>
+        
+        <form id="registrationForm">
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Email" required>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Select Country</label>
+                    <select id="countrySelect" required>
+                        <option value="">Choose Country...</option>
+                        <option value="italy">Italy</option>
+                        <option value="japan">Japan</option>
+                        <option value="south-korea">South Korea</option>
+                        <option value="canada">Canada</option>
+                        <option value="france">France</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Preferred Program</label>
+                    <select id="programSelect" required>
+                        <option value="">Choose Program...</option>
+                        <option value="undergrad">Undergraduate</option>
+                        <option value="postgrad">Postgraduate</option>
+                        <option value="language">Language School</option>
+                        <option value="short-course">Short Course</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Register Now</button>
+        </form>
+    </div>
+</div>
+
+    <header class="hero" id="home">
+        <div class="hero-overlay">
+            <h1>The world is your <br><span>classroom.</span></h1>
+            <p>Curating life-changing education in the world's most inspiring corners.</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by country...">
+                <button onclick="searchFunction()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+		
+		
+    </header>
+	
+	<section class="about-company" id="about">
+    <div class="about-container">
+        <div class="about-badge">About Us</div>
+        <h2>Redefining the Student Journey</h2>
+        <div class="underline"></div>
+        
+        <div class="about-text-content">
+            <p class="lead-para">
+                <strong>Lumina</strong> is a premier study abroad consultancy dedicated to bridging the gap between traditional education and global exploration. Founded on the belief that the world’s most profound lessons are learned outside the classroom, Lumina curates immersive academic experiences in the most inspiring cultural hubs—from the historic streets of Florence to the high-tech skylines of Seoul.
+            </p>
+            <p>
+                We don't just facilitate visas and university placements; we design life-changing journeys. By focusing on high-quality programs and personal student growth, Lumina empowers the next generation of global citizens to expand their horizons, master new languages, and build a professional network that spans continents. At Lumina, we believe that when you change your environment, you change your future.
+            </p>
+        </div>
+        
+        <div class="about-stats">
+            <div class="stat-item">
+                <span>15+</span>
+                <p>Countries</p>
+            </div>
+            <div class="stat-item">
+                <span>500+</span>
+                <p>University Partners</p>
+            </div>
+            <div class="stat-item">
+                <span>10k+</span>
+                <p>Global Alumni</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="destinations" id="destinations">
+        <div class="section-header">
+            <h2>Featured Destinations</h2>
+            <div class="underline"></div>
+        </div>
+        
+        <div class="grid" id="destinationGrid">
+            <div class="card" data-country="Italy">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="card-content">
+                    <h3>Italy</h3>
+                    <p>Art, history, and the finest culinary education.</p>
+                    <a href="#" class="card-link">View Programs</a>
+                </div>
+            </div>
+
+            <div class="card" data-country="Japan">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="card-content">
+                    <h3>Japan</h3>
+                    <p>Experience the perfect blend of tradition and tech.</p>
+                    <a href="#" class="card-link">View Programs</a>
+                </div>
+            </div>
+
+            <div class="card" data-country="South Korea">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="card-content">
+                    <h3>South Korea</h3>
+                    <p>Immerse yourself in K-culture and global business.</p>
+                    <a href="#" class="card-link">View Programs</a>
+                </div>
+            </div>
+
+            <div class="card" data-country="Canada">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="card-content">
+                    <h3>Canada</h3>
+                    <p>Top-tier research amidst breathtaking nature.</p>
+                    <a href="#" class="card-link">View Programs</a>
+                </div>
+            </div>
+
+
+            <div class="card" data-country="France">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="card-content">
+                    <h3>France</h3>
+                    <p>Fashion, politics, and philosophy in the City of Light.</p>
+                    <a href="#" class="card-link">View Programs</a>
+                </div>
+            </div>
+			
+			<div class="card" data-country="Australia">
+    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80');"></div>
+    <div class="card-content">
+        <h3>Australia</h3>
+        <p>Global commerce and marine biology on the edge of the Pacific.</p>
+        <a href="#" class="card-link">View Programs</a>
+    </div>
+</div>
+        </div>
+    </section>
+	
+	
+	
+	<div id="programsModal" class="registernow">
+    <div class="registernow-content program-modal-size">
+        <span class="close-programs">&times;</span>
+        <h2 id="modalCountryName">Florence, Italy</h2>
+        <p>Available Educational Pathways</p>
+        
+        <div class="program-list">
+            <div class="program-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                    <h4>Bachelors & Postgrad</h4>
+                    <p>Degree programs in Art, Design, and History.</p>
+                </div>
+            </div>
+            <div class="program-item">
+                <i class="fa-solid fa-certificate"></i>
+                <div>
+                    <h4>Diplomas & Short Courses</h4>
+                    <p>6-12 month specialized certifications.</p>
+                </div>
+            </div>
+            <div class="program-item">
+                <i class="fa-solid fa-language"></i>
+                <div>
+                    <h4>Language Schools</h4>
+                    <p>Immersive Italian language fluency programs.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://www.unifi.it/changelang-eng.html" target="_blank" id="univLink" class="submit-btn univ-btn">
+            Visit University Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </div>
+</div>
+
+
+		
+	<section class="stories" id="our stories">
+    <div class="section-header">
+        <h2>Our Stories</h2>
+        <div class="underline"></div>
+        <p class="section-subtitle">Real experiences from students redefining their boundaries.</p>
+    </div>
+
+    <div class="story-container">
+        <div class="story-box">
+            <div class="story-img" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80');"></div>
+            <div class="story-text">
+                <span class="story-tag">Kyoto, Japan</span>
+                <h3>Finding Peace in the Pace</h3>
+                <p>"Studying in Kyoto wasn't just about credits; it was about learning the art of 'Ikigai'. Between tech seminars and tea ceremonies, I found a version of myself I never knew existed."</p>
+                <span class="story-author">— Sarah J., Design Student</span>
+            </div>
+        </div>
+
+        <div class="story-box reverse">
+            <div class="story-img" style="background-image: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80');"></div>
+            <div class="story-text">
+                <span class="story-tag">Florence, Italy</span>
+                <h3>The Living Museum</h3>
+                <p>"Walking to my morning lecture past the Duomo felt surreal. Lumina helped me navigate the visa process so I could focus on what mattered: the Renaissance and the ravioli."</p>
+                <span class="story-author">— Marcus L., History Major</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="logo-container">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">LUMINA</span>
+                </div><br>
+                <p>Redefining international education through curated, immersive study experiences.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+				
+
+            </div>
+
+            <div class="footer-col">
+                <h4>Destinations</h4>
+                <ul>
+                    <li><a href="#">Italy</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">Soth Korea</a></li>
+                    <li><a href="#">Canada</a></li>
+					<li><a href="#">France</a></li>
+					<li><a href="#">Australia</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Visa Assistance</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">Student Housing</a></li>
+                    <li><a href="#">Safety & Health</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col newsletter">
+                <h4>Stay Inspired</h4>
+                <p>Join our newsletter for travel tips and program updates.</p>
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Email address">
+                    <button>Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lumina Global. <a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
